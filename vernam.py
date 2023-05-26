@@ -1,3 +1,5 @@
+alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+
 def setClave():
 	return input('Ingrese la clave: ').upper()
 
@@ -16,11 +18,10 @@ def textoaBinario(texto):
 		#print(f'Caracter {c} - Binario {aBinario(c)}')
 	return resultado
 
-def binarioaTexto(texto = ''):
+def binarioaTexto(texto):
 	resultado = ''
 	caracter = ''
-	for c in texto:
-		
+	for c in texto:	
 		caracter = caracter + c
 		if len(caracter) == 8:
 			resultado = resultado + aCaracter(caracter)
@@ -66,5 +67,5 @@ def vernam():
 	print(texto)
 	print(binarioaTexto(cadenaProcesada))
 
-alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+#Main
 vernam()
