@@ -29,13 +29,13 @@ def binarioaTexto(texto = ''):
 	return resultado
 
 def aBinario(char):
-	alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+	global alfabeto
 	num = alfabeto.index(char)
 	cadena_binaria = bin(num)[2:]  # Convertir el número entero a binario y eliminar el prefijo '0b'
 	return cadena_binaria.rjust(8,'0')
 
 def aCaracter(binario):
-	alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
+	global alfabeto
 	asciiCode = int(binario,2)
 	return alfabeto[asciiCode]
 
@@ -66,4 +66,5 @@ def vernam():
 	print(texto)
 	print(binarioaTexto(cadenaProcesada))
 
+alfabeto = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z','0','1','2','3','4','5','6','7','8','9']
 vernam()
