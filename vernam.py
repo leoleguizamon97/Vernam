@@ -9,6 +9,14 @@ def xor(a, b):
 		return '0'
 	return '1'
 
+def textoaBinario(texto):
+	resultado = ''
+	for c in texto:
+		resultado = resultado + aBinario(c)
+		print(f'Caracter {c} - Binario {aBinario(c)}')
+	return resultado
+
+
 def aBinario(char):
 	num = ord(char)
 	cadena_binaria = bin(num)[2:]  # Convertir el número entero a binario y eliminar el prefijo '0b'
@@ -29,18 +37,14 @@ def vernamDesencriptar(clave, texto):
 def vernam(modo = 0):
 	clave = setClave()
 	texto = setTextoProcesar()
-	claveBinaria = ''
-	textoBinario = ''
 	#Definimos la clave binaria
-	for c in clave:
-		claveBinaria = claveBinaria + aBinario(c)
-		print(f'Caracter {c} - Binario {aBinario(c)}')
+	claveBinaria = textoaBinario(clave)
 	#Pasamos el texto plano a binario
-	for c in texto:
-		textoBinario = textoBinario + aBinario(c)
-		print(f'Caracter {c} - Binario {aBinario(c)}')
+	textoBinario = textoaBinario(texto)
+
 	print('Clave en binario: '+ claveBinaria)
 	print('Texto en binario: '+ textoBinario)
+	
 	##Encriptamos o des-encriptamos
 	while():
 		if modo == 0:
