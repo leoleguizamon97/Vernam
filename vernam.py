@@ -27,8 +27,13 @@ def aCaracter(binario):
 	return chr(asciiCode)
 
 def vernamEncriptar(clave, texto):
-
-	return
+	resultado = ''
+	i = 0
+	for b in texto:
+		a = clave[i%len(clave)]
+		resultado = resultado + xor(a,b)
+		i+=1
+	return resultado
 
 def vernamDesencriptar(clave, texto):
 
