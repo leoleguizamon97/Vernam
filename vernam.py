@@ -22,8 +22,11 @@ def vernamEncriptar(clave, texto):
 
 	return
 
+def vernamDesencriptar(clave, texto):
 
-def vernam(accion = 0):
+	return
+
+def vernam(modo = 0):
 	clave = setClave()
 	texto = setTextoProcesar()
 	claveBinaria = ''
@@ -39,11 +42,16 @@ def vernam(accion = 0):
 	print('Clave en binario: '+ claveBinaria)
 	print('Texto en binario: '+ textoBinario)
 	##Encriptamos o des-encriptamos
-
-
-
-	
-
+	while():
+		if modo == 0:
+			print (vernamEncriptar)
+			break
+		elif modo == 1:
+			print (vernamEncriptar)
+			break
+		else:
+			print('Modo no valido: [0 : Encriptar] [1 : Desencriptar]')
+			modo = int('Ingrese la opcion correcta [0 o 1]')
 
 
 vernam()
